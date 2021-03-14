@@ -1,0 +1,47 @@
+type Test @model @auth(rules: [{allow: public}]) {
+  id: ID!
+}
+
+type NavigationalCatalog @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  version: Int
+  fetchedDate: AWSDateTime
+  expiryDate: AWSDateTime
+  interval: Int
+  fetchRealTime: Boolean
+  catalogCategories: [CatalogCategory] @connection(keyName: "byNavigationalCatalog", fields: ["id"])
+}
+
+type CatalogCategory @model @auth(rules: [{allow: public}]) @key(name: "byNavigationalCatalog", fields: ["navigationalcatalogID"]) {
+  id: ID!
+  name: String
+  description: String
+  categoryTheme: CategoryTheme @connection
+  button: ButtonProperties @connection
+  image: String
+  priority: Int
+  navigationalcatalogID: ID
+}
+
+type ColourProperties @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  red: Int
+  green: Int
+  blue: Int
+}
+
+type ButtonProperties @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  text: String
+  textColor: ColourProperties @connection
+  color: ColourProperties @connection
+}
+
+type CategoryTheme @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  selectedColor: ColourProperties @connection
+  unSelectedColor: ColourProperties @connection
+  indicatorColor: ColourProperties @connection
+  descriptionColor: ColourProperties @connection
+  backgroundColor: ColourProperties @connection
+} 

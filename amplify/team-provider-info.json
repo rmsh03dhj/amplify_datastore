@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gnmobilecustomer-dev-03204-authRole",
+      "UnauthRoleArn": "arn:aws:iam::969004666635:role/amplify-gnmobilecustomer-dev-03204-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::969004666635:role/amplify-gnmobilecustomer-dev-03204-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-gnmobilecustomer-dev-03204-deployment",
+      "UnauthRoleName": "amplify-gnmobilecustomer-dev-03204-unauthRole",
+      "StackName": "amplify-gnmobilecustomer-dev-03204",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:969004666635:stack/amplify-gnmobilecustomer-dev-03204/b3a14380-845c-11eb-bd7f-02dd7379711a",
+      "AmplifyAppId": "d3jnhnq0kqfm8w"
+    },
+    "categories": {
+      "auth": {
+        "gnmobilecustomer8afd5d048afd5d04": {}
+      }
+    }
+  }
+}

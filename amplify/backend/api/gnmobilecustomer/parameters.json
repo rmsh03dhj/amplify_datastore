@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "gnmobilecustomer",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false
+}
